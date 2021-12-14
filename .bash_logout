@@ -2,7 +2,7 @@
 
 # when leaving the console clear the screen to increase privacy
 
-HISTORY=$(diff <( history | cut -c 8- ) ~/.bash_history | sed -n 's/^< //pg' | sed 's|$|::|' )
+HISTORY=$(diff <( history | cut -c 8- ) ~/.bash_history | sed -n 's/^< //pg' | sed 's|$|\n|' )
 echo "history $HISTORY"
 HOSTNAME=$(hostname)
 echo "hostname $HOSTNAME"
